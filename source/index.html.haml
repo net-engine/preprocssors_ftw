@@ -1,26 +1,12 @@
-- steps = 5
-
 %form
-  
-  - (1..steps).each do |step|
+
+  - data.steps.each_with_index do |step, index|
     
-    %section.step{data: { step: step } }
-      %h1= "Step #{step}"
-      
+    %section.step{data: { step: index } }
+      %h1= "Step #{index + 1}"
+
       %ol
-        %li.form-item
-          %label
-          %input{type: 'text'}
-        %li.form-item
-          %label
-          %input{type: 'text'}
-        %li.form-item
-          %label
-          %input{type: 'text'}
-        %li.form-item
-          %label
-          %input{type: 'text'}
-        
-        - if step == steps
-          %li.form-submit
-            %input{type: 'submit'}
+        - step.labels.each do |label|
+          %li.form-item
+            %label= label['title']
+            %input{type: 'text'}

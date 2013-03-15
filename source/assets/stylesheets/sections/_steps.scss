@@ -3,5 +3,7 @@
   
   &.active {
     display: block;
+    z-index: 3;
+    position: relative;
   }
 }
