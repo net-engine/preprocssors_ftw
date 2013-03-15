@@ -3,8 +3,13 @@
   &.active {
     display: inline-block;
   }
-
   ol {
     margin-bottom: 1em;
   }
+}
+.pagination {
+  margin-top: $size*1.5;
+}
+.prev, .next {
+  @include one-half;
 }

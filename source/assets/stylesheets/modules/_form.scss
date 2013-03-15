@@ -7,6 +7,16 @@
   font-family: '$font-family';
 }
 
+.button {
+  width:auto;
+  display: block;
+  background: $blue;
+  color:$white;
+  border: 0;
+  padding:0.5em 1em;
+  font: inherit;
+}
+
 input {
   &[type='color'], &[type='date'], &[type='datetime'], &[type='datetime'], &[type='email'], &[type='month'], &[type='number'], &[type='password'], &[type='search'], &[type='tel'], &[type='text'], &[type='time'], &[type='url'], &[type='week'] {
     @include one-half;
@@ -19,20 +29,14 @@ input {
     line-height: 1.5em; 
   }
 }
+input[type='submit'] {
+  @extend button;
+}
 
 label {
   @include one-half;
   font-size: 1em;
   line-height: 1.2em;
-}
-
-input[type='submit'] {
-  width:100%;
-  background: $blue;
-  color:$white;
-  border: 0;
-  padding:0.5em 1em;
-  font: inherit;
 }
 
 .form-item {

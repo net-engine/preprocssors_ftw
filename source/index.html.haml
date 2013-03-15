@@ -14,11 +14,13 @@
             %li.form-item
               %label= label['title']
               %input{type: 'text'}
-              
+
         .pagination
           - unless index == 0
-            .prev= link_to 'Prev', '#', class: 'prev-button', data: { step: index - 1 }
-          .next= link_to 'Next', '#', class: 'next-button', data: { step: index + 1 }
+            .prev
+              = link_to 'Prev', '#', id: 'prev-button', class:'button', data: { step: index + 1 }
+          .next
+            = link_to 'Next', '#', id: 'next-button', class:'button', data: { step: index + 1 }
 
       - else
         %h1= "Success"
