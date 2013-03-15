@@ -10,9 +10,36 @@
 input {
   &[type='color'], &[type='date'], &[type='datetime'], &[type='datetime'], &[type='email'], &[type='month'], &[type='number'], &[type='password'], &[type='search'], &[type='tel'], &[type='text'], &[type='time'], &[type='url'], &[type='week'] {
     @include one-half;
+    border:none;
+    background: $black;
+    color:$white;
+    outline: none;
+    font-family: inherit;
+    padding-left:0.5em;
+    line-height: 1.5em; 
   }
 }
 
 label {
   @include one-half;
+}
+
+input[type='submit'] {
+  width:100%;
+  background: $blue;
+  color:$white;
+  border: 0;
+  padding:0.5em 1em;
+  font: inherit;
+}
+
+
+::selection {
+  background: $blue;
+}
+::-moz-selection {
+  background: $blue;
+}
+::-webkit-selection {
+  background: $blue;
 }

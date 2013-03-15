@@ -1,4 +1,6 @@
-
+body {
+  background:$white;
+}
 .wrapper {
   padding: $size;
 }
@@ -6,4 +8,8 @@
 .container {
   margin: auto;
   max-width: $max-width;
+}
+
+.form-submit {
+  @include one-half;
 }

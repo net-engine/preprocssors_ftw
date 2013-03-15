@@ -10,6 +10,7 @@ nav.navigation {
     vertical-align: top;
     color: $white;
     background: $blue;
+    border: 0.5em solid whiteSmoke;
     @include border-radius(50%);
   
     &.active {
@@ -18,5 +19,9 @@ nav.navigation {
   }
   .nav-link {
     @include colSpan(1, 5);
+    padding:0;
+    &:first-child{
+      margin-left: -0.5em;
+    }
   }
 }
