@@ -1,13 +1,23 @@
+
 %form
 
   - data.steps.each_with_index do |step, index|
-    
-    %section.step{data: { step: index } }
-      %h1= "Step #{index + 1}"
 
-      %ol
-        - step.labels.each do |label|
-          %li.form-item
-            %label= label['title']
-            %input{type: 'text'}
+    %section.step{ data: { step: index } }
+
+      - if index != (data.steps.count - 1)
+
+        %h1= "Step #{index + 1}"
+
+        %ol
+          - step.labels.each do |label|
+            %li.form-item
+              %label= label['title']
+              %input{type: 'text'}
+
+        = link_to 'Next', '#', id: 'next-button'
+
+      - else
+        %h1= "Success"
+        = image_tag 'joffrey.gif'
 

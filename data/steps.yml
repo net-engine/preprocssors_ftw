@@ -1,6 +1,10 @@
 - labels:
-  - title: 'Label one'
-  - title: 'Label two'
+  - title: 'Do you like hamburgers?'
+  - title: 'Or chicken wings?'
 - labels:
-  - title: 'Label 42'
-  - title: 'Label cat'
+  - title: 'How about beer?'
+  - title: 'If so, IPA?'
+- labels:
+  - title: 'So many questions...'
+- labels:
+  - title: 'Do you want to learn how to code?'
