@@ -1,8 +1,12 @@
+- steps = 5
 
 %form
-
-  - (1..5).each do |step|
-    .step{data: { step: step } }
+  
+  - (1..steps).each do |step|
+    
+    %section.step{data: { step: step } }
+      %h1= "Step #{step}"
+      
       %ol
         %li.form-item
           %input{type: 'text'}
@@ -12,5 +16,7 @@
           %input{type: 'text'}
         %li.form-item
           %input{type: 'text'}
-        %li.form-submit
-          %input{type: 'submit'}
+        
+        - if step == steps
+          %li.form-submit
+            %input{type: 'submit'}

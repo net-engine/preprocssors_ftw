@@ -6,9 +6,11 @@
 
 @import 'variables';
 
+// ------------------------------ //
+
 @import 'modules/form';
 
-
-@import 'global';
+@import 'layout',
+        'typography';
 
 @import 'steps';
