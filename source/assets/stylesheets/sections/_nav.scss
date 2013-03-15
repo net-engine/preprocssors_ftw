@@ -9,4 +9,7 @@ nav.navigation {
     text-decoration: none;
     color:$white;
   }
+  .nav-link {
+    @include colSpan(1, 5);
+  }
 }

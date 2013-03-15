@@ -9,6 +9,10 @@
 
 input {
   &[type='color'], &[type='date'], &[type='datetime'], &[type='datetime'], &[type='email'], &[type='month'], &[type='number'], &[type='password'], &[type='search'], &[type='tel'], &[type='text'], &[type='time'], &[type='url'], &[type='week'] {
-    
+    @include one-half;
   }
+}
+
+label {
+  @include one-half;
 }
