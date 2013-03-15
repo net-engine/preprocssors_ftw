@@ -1,0 +1,65 @@
+$gutter:$size;
+
+@mixin colSpan($span, $total) {
+
+  @include box-sizing(border-box);
+  display:inline-block;
+  vertical-align: top;
+  width:100%/$total*$span !important;
+  font-size: $font-size;
+  margin-right: -0.333em;
+  padding: 0 $gutter/2;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+}
+
+
+@mixin one-half {
+
+  @include colSpan(1, 2);
+
+}
+
+@mixin one-third {
+
+  @include colSpan(1, 3);
+
+}
+
+@mixin row-of-two($first: 1, $second: 1, $total: 2) {
+
+  & > * {
+    
+    &:first-child {
+      @include colSpan($first, $total);
+    }
+
+    &:last-child {
+      @include colSpan($second, $total);
+    }
+  }
+
+}
+
+@mixin row-of-three($first: 1, $second: 1, $third: 1, $total: 3) {
+
+  & > * {
+    @include colSpan($second, $total);
+  }
+
+  &:first-child {
+    @include colSpan($first, $total);
+  }
+
+  &:last-child {
+    @include colSpan($third, $total);
+  }
+
+}

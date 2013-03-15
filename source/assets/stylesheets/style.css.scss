@@ -1,16 +1,28 @@
-@import 'compass',
-        'compass/reset';
+@import
+  'compass',
+  'compass/reset';
 
-@import 'functions',
-        'mixins';
+@import
+  'functions',
+  'mixins';
 
-@import 'variables';
+@import 
+  'settings';
 
-// ------------------------------ //
+@import 
+  'modules/form';
 
-@import 'modules/form';
+@import 
+  'layout',
+  'typography';
 
-@import 'layout',
-        'typography';
+@import 
+  'modules/grid',
+  'modules/form';
+  
+@import 
+  'global';
 
-@import 'steps';
+@import 
+  'sections/steps',
+  'sections/nav';

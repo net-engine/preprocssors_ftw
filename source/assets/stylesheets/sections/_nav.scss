@@ -1,0 +1,12 @@
+nav.navigation {
+  a {
+    display: inline-block;
+    background: $blue;
+    @include border-radius(2em);
+    line-height: 4em;
+    width: 4em;
+    text-align: center;
+    text-decoration: none;
+    color:$white;
+  }
+}
