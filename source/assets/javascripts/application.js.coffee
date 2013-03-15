@@ -32,3 +32,9 @@ $ ->
   else
     localStorage.setItem('step', 1)
     $('.step[data-step="1"], .step-link[data-step="1"]').addClass('active')
+
+
+# $(document).on 'keyup', (e) ->
+#   if e.keyCode == 39 # RIGHT    
+#   else if e.keyCode == 37 # LEFT
+#     
