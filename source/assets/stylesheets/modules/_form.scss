@@ -1,0 +1,14 @@
+
+.text-input {
+  padding: 1em;
+  height: 1em;
+  line-height: 1em;
+  font-size: 100%;
+  font-family: '$font-family';
+}
+
+input {
+  &[type='color'], &[type='date'], &[type='datetime'], &[type='datetime'], &[type='email'], &[type='month'], &[type='number'], &[type='password'], &[type='search'], &[type='tel'], &[type='text'], &[type='time'], &[type='url'], &[type='week'] {
+    
+  }
+}

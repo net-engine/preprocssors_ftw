@@ -1,0 +1,6 @@
+<li>
+  <img src='<%= @profile_image_url %>'>
+  <div class='details'>
+    <a class='icon-twitter' href='http://twitter.com/'><%= @screen_name %></a>
+  </div>
+</li>

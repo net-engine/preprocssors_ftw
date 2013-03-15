@@ -1,0 +1,16 @@
+
+%form
+
+  - (1..5).each do |step|
+    .step{data: { step: step } }
+      %ol
+        %li.form-item
+          %input{type: 'text'}
+        %li.form-item
+          %input{type: 'text'}
+        %li.form-item
+          %input{type: 'text'}
+        %li.form-item
+          %input{type: 'text'}
+        %li.form-submit
+          %input{type: 'submit'}

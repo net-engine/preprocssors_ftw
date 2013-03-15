@@ -1,0 +1,134 @@
+
+// ---------------------------------------------------------------------------- //
+
+// -- Mixins -- //
+
+// ---------------------------------------------------------------------------- //
+
+
+// -- Gradients -- //
+
+@mixin vertical-gradient($color1, $color2: darken($color1, 5%)) {
+  background-color: $color1;
+  @include filter-gradient($color1, $color2, vertical);
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top, $color1 0%, $color2 100%));
+}
+
+@mixin horizontal-gradient($color1, $color2: darken($color1, 5%)) {
+  background-color: $color1;
+  @include filter-gradient($color1, $color2, horizontal);
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(left, $color1 0%, $color2 100%));
+}
+
+
+// ---------------------------------------------------------------------------- //
+
+
+// -- Columns -- //
+
+
+
+@mixin clearfix {
+  zoom: 1;
+
+  &:before, &:after {
+    content: '\20';
+    display: inline-block;
+    display: table;
+  }
+
+  &:after { clear: both; }
+}
+
+@mixin full-width-block {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+$column-padding: 20px;
+
+@mixin block {
+  float: left;
+  padding-left: $column-padding;
+  @include box-sizing(border-box);
+
+  @media screen and (max-width: 600px) { width: 100%; }
+}
+
+@mixin block-parent {
+  float: none;
+  clear: both;
+  width: auto;
+  margin-left: -#{$column-padding};
+  @include clearfix;
+}
+
+@mixin two-columns {
+  @include block-parent;
+
+  > * {
+    width: 50%;
+    @include block;
+  }
+
+  > :nth-child(2n + 2) + * {
+    clear: both;
+  }
+}
+
+@mixin three-columns {
+  @include block-parent;
+
+  > * {
+    width: 33.333%;
+    @include block;
+  }
+}
+
+@mixin four-columns {
+  @include block-parent;
+
+  > * {
+    width: 25%;
+    @media screen and (max-width: 1000px) { width: 50%; }
+    @include block;
+  }
+}
+
+@mixin five-columns {
+  @include block-parent;
+
+  > * {
+    width: 20%;
+    @media screen and (max-width: 1000px) { width: 50%; }
+    @include block;
+  }
+}
+
+@mixin six-columns {
+  @include block-parent;
+
+  > * {
+    width: 16.666%;
+    @media screen and (max-width: 1000px) { width: 33.333%; }
+    @include block;
+  }
+}
+
+
+
+// ---------------------------------------------------------------------------- //
+
+
+// -- Animations -- //
+
+
+@mixin animate($name: fadeIn, $duration: 1s, $delay: 0.2s, $function: ease, $mode: both) {
+  @include experimental(animation, $name $duration $delay $function $mode);
+}
+
+@import 'lib/animate-custom.css';
+
