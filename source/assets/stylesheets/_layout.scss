@@ -1,9 +1,6 @@
-body{
-  font: $font-size $line-height $font-family;
-}
 
 .wrapper {
-  padding: 2em;
+  padding: $size;
 }
 
 .container {

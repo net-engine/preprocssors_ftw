@@ -5,14 +5,15 @@ $(document).on 'click', '.step-link', (e) ->
   e.preventDefault()
   step = $(this).data('step')
   
-  $('.step').removeClass('active')
-  $('.step[data-step=' + step + ']').addClass('active')
+  $('.step, .step-link').removeClass('active')
+  $('.step[data-step=' + step + '], .step-link[data-step=' + step + ']').addClass('active')
   localStorage.setItem('step', step)
-
 
 $ ->
   if localStorage.getItem('step')
-    $('.step[data-step=' + localStorage.getItem('step') + ']').addClass('active')
+    step = localStorage.getItem('step')
+    $('.step[data-step=' + step + '], .step-link[data-step=' + step + ']').addClass('active')
+    
   else
     localStorage.setItem('step', 1)
-    $('.step[data-step="1"]').addClass('active')
+    $('.step[data-step="1"], .step-link[data-step="1"]').addClass('active')
