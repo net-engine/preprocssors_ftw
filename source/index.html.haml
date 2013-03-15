@@ -15,7 +15,8 @@
               %label= label['title']
               %input{type: 'text'}
 
-        = link_to 'Next', '#', id: 'next-button'
+        = link_to 'Prev', '#', id: 'prev-button', data: { step: index + 1 }
+        = link_to 'Next', '#', id: 'next-button', data: { step: index + 1 }
 
       - else
         %h1= "Success"
