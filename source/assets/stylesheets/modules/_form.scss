@@ -22,6 +22,8 @@ input {
 
 label {
   @include one-half;
+  font-size: 1em;
+  line-height: 1.2em;
 }
 
 input[type='submit'] {
@@ -33,6 +35,9 @@ input[type='submit'] {
   font: inherit;
 }
 
+.form-item {
+  margin-bottom: $size/2;
+}
 
 ::selection {
   background: $blue;

@@ -1,11 +1,9 @@
 .step {
   display: none;
-  
   &.active {
-    display: block;
-    z-index: 3;
-    position: relative;
+    display: inline-block;
   }
+
   ol {
     margin-bottom: 1em;
   }
