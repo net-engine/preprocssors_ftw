@@ -18,14 +18,14 @@
         .pagination
           - unless index == 0
             .prev
-              = link_to 'Prev', '#', id: 'prev-button', class:'button', data: { step: index + 1 }
+              = link_to 'Prev', '#', class: 'prev-button button', data: { step: index - 1 }
           .next
-            = link_to 'Next', '#', id: 'next-button', class:'button', data: { step: index + 1 }
+            = link_to 'Next', '#', class: 'next-button button', data: { step: index + 1 }
 
       - else
         %h1= "Success"
         = image_tag 'joffrey.gif'
         
         .pagination
-          .prev= link_to 'Prev', '#', class: 'prev-button', data: { step: index - 1 }
+          .prev= link_to 'Prev', '#', class: 'prev-button button', data: { step: index - 1 }
 
